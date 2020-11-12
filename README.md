@@ -15,5 +15,7 @@ The script is tested only on Google Chrome since that is what I am using, but sh
 The controls can be seen in the image below.
 
 You can also use the arrow keys instead of the controls and the space bar for pause.
+If you want to change some vaule you can start by customizing the variables `seekOffset` and `speedOffset`. 
+This allows you to change the value by which the playback is offset or the speed is increased/decreased.
 
 ![image](controls.png)
