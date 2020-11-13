@@ -18,4 +18,13 @@ You can also use the arrow keys instead of the controls and the space bar for pa
 If you want to change some vaule you can start by customizing the variables `seekOffset` and `speedOffset`. 
 This allows you to change the value by which the playback is offset or the speed is increased/decreased.
 
-![image](controls.png)
+
+### Light Theme
+
+Now available in light and dark mode (thanks to [@stefan-krstikj](https://github.com/stefan-krstikj)) to protect those precious student eyes.
+
+![image](assets/readme_imgs/control.png)
+
+### Dark Theme
+
+![image](assets/readme_imgs/control_dark.png)
