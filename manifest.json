@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "BigBlueButton buttons",
+  "version": "1.0",
+
+  "description": "Adds media-playback controls to BigBlueButton recordings.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://bbb-lb.finki.ukim.mk/*"],
+      "js": ["bbb_buttons.js"]
+    }
+  ]
+
+}
