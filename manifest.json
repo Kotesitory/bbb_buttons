@@ -11,6 +11,18 @@
       "matches": ["*://bbb-lb.finki.ukim.mk/*"],
       "js": ["bbb_buttons.js"]
     }
-  ]
+  ],
+
+  "options_ui": {
+    "page": "settings/options.html"
+  },
+
+  "permissions": ["storage"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "becutandavid@gmail.com"
+    }
+  }
 
 }
