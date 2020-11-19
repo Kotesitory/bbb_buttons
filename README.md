@@ -1,10 +1,10 @@
 # BBB Buttons
 
 BBB Buttons is a sigle file script for adding media-playback controls to BigBlueButton recordings.
-
 From students, for students.
-
 Feel free to PR if I see it, I will definitely consider it.
+
+Now available as a Chrome extension and Firefox add-on. Check [here](https://github.com/Kotesitory/bbb_buttons_extensions).
 
 # Usage
 
