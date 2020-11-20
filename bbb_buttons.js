@@ -125,17 +125,15 @@ function load() {
 		btnToggleDarkMode.style.transitionDuration = TRANSITION_DURATION
 	}
 
-  function fullScreen() {
+	function fullScreen() {
 		presentationArea.requestFullscreen();
-  }
+	}
 
 	function createButton(color, symbol, func, append=false){
 		let btn = document.createElement('button');
 		btn.type = "button";
 		btn.width = 100;
-    btn.height = 100;
-    btn.style.marginLeft = "1.5px";
-	  btn.style.marginRight = "1.5px";
+		btn.height = 100;
 		btn.style.background = color;
 		btn.innerText = symbol;
 		btn.onclick = func;
@@ -147,8 +145,7 @@ function load() {
 
 	var btn_div = document.createElement('div');
 	btn_div.id = "btn-div";
-  btn_div.style.display = "block";
-  btn_div.style.textAlign = "center";
+  	btn_div.style.display = "block";
 	btn_div.appendChild(label);
 	createButton('gray', '←', back, true);
 	createButton('gray', '→', forward, true);
@@ -160,23 +157,22 @@ function load() {
 	chat_area.insertBefore(btn_div, chat_area.firstChild);
 	document.onkeydown = checkKey;
 
-	var navBar = document.getElementById("navbar")
-	var recordingTitle = document.getElementById("recording-title")
-	var sidebarIcon = document.getElementsByClassName("sidebar-icon").item(0)
-	var emptyVideoArea = document.getElementById("video")
+	var navBar = document.getElementById("navbar");
+	var recordingTitle = document.getElementById("recording-title");
+	var sidebarIcon = document.getElementsByClassName("sidebar-icon").item(0);
+	var emptyVideoArea = document.getElementById("video");
 	emptyVideoArea.style.height = "1px";
-	var chat = document.getElementById("chat")
+	var chat = document.getElementById("chat");
 	chat.style.border = "0px";
-	var chatAreaSecond = document.getElementsByClassName("inner-wrap").item(0)
-  var playBack = document.getElementById("main-section")
-  
-  var presentationArea = document.getElementById("presentation-area");
-  var oldFullscreenButton = document.getElementsByClassName("acorn-fullscreen-button")[0];
-  var fullscreenButton = oldFullscreenButton.cloneNode(true);
-  oldFullscreenButton.parentNode.replaceChild(fullscreenButton, oldFullscreenButton);
-  fullscreenButton.addEventListener("click", fullScreen);
+	var chatAreaSecond = document.getElementsByClassName("inner-wrap").item(0);
 
-	setTransitions()
+	var presentationArea = document.getElementById("presentation-area");
+	var oldFullscreenButton = document.getElementsByClassName("acorn-fullscreen-button")[0];
+	var fullscreenButton = oldFullscreenButton.cloneNode(true);
+	oldFullscreenButton.parentNode.replaceChild(fullscreenButton, oldFullscreenButton);
+	fullscreenButton.addEventListener("click", fullScreen);
+
+	setTransitions();
 
 	function checkKey(e) {
 
