@@ -165,7 +165,8 @@ function load() {
 	var chat = document.getElementById("chat");
 	chat.style.border = "0px";
 	var chatAreaSecond = document.getElementsByClassName("inner-wrap").item(0);
-
+	
+	var playBack = document.getElementById("main-section");
 	var presentationArea = document.getElementById("presentation-area");
 	var oldFullscreenButton = document.getElementsByClassName("acorn-fullscreen-button")[0];
 	var fullscreenButton = oldFullscreenButton.cloneNode(true);
