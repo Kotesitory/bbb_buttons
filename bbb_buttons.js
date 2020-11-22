@@ -203,6 +203,43 @@ function load() {
 	    		audio.pause();
 	    }
 	}
+	
+	var video_length = document.getElementsByClassName("ui-slider-handle ui-state-default ui-corner-all")[0].getAttribute('aria-valuemax');
+	document.getElementsByClassName("acorn-timer")[0].remove();
+
+	var setTimeAfter = document.getElementsByClassName("acorn-play-button")[0];
+	setTimeAfter.insertAdjacentHTML('afterend', "<span class='acorn-timer' id='currTime'></span>");
+	setTimeAfter = document.getElementById('currTime');
+	setTimeAfter.style.width = "max-content";
+
+	var changehere = document.getElementsByClassName("acorn-seek-slider ui-slider ui-widget ui-widget-content ui-corner-all ui-slider-horizontal")[0];
+	changehere.insertAdjacentHTML('afterend', "<span class='acorn-timer' id='timeleft'></span>");
+	changehere = document.getElementById('timeleft');
+	changehere.style.width = "max-content";
+
+	function parseTime(secs) {
+		var hours   = Math.floor(secs / 3600);
+		var minutes = Math.floor((secs - (hours * 3600)) / 60);
+		var seconds = Math.floor(secs - (hours * 3600) - (minutes * 60));
+	
+		var time = "";
+		if (hours > 0)   {time += hours+":";}
+		if (minutes < 10) {minutes = "0" + minutes;}
+		if (seconds < 10) {seconds = "0" + seconds;}
+		time += minutes+':'+seconds;
+	  
+		return time;
+	  };
+
+	function settime()
+	{
+		setTimeAfter.innerHTML = parseTime(audio.currentTime);
+		timeleft = video_length - audio.currentTime;
+		timeleft = parseTime(timeleft+1);
+		changehere.innerText = "-" + timeleft;
+	}
+	setInterval(settime, 10);
+	
 }
 
 load();
