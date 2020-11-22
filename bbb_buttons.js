@@ -30,8 +30,6 @@ function load() {
 	label.textContent = "Video speed:" + playbackSpeed.toFixed(2);
 
 	function forward(){
-		console.log(seekOffset);
-		console.log(audio.currentTime);
 		audio.currentTime += seekOffset;
 	  	if(video != undefined && video != null)
 	   		video.currentTime += seekOffset;
@@ -196,6 +194,9 @@ function load() {
 	       	forward();
 	    }else if (e.keyCode == '32'){
 	    	//space bar
+	    	if(document.activeElement != document.body)
+	    		document.activeElement.blur();
+	    	
 	    	if(audio.paused)
 	    		audio.play();
 	    	else

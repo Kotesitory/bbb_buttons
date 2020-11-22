@@ -36,3 +36,4 @@ Now available in light and dark mode (thanks to [@stefan-krstikj](https://github
 | [@stefan-krstikj](https://github.com/stefan-krstikj)	|
 | [@becutandavid](https://github.com/becutandavid)		|
 | [@jovanvelkovski](https://github.com/jovanvelkovski)	|
+| [@makikaka](https://github.com/makikaka)				|
