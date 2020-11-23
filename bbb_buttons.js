@@ -226,20 +226,19 @@ function load() {
 		if (hours > 0)   {time += hours+":";}
 		if (minutes < 10) {minutes = "0" + minutes;}
 		if (seconds < 10) {seconds = "0" + seconds;}
-		time += minutes+':'+seconds;
+		time += minutes + ':' + seconds;
 	  
 		return time;
-	  };
-
-	function settime()
-	{
-		setTimeAfter.innerHTML = parseTime(audio.currentTime);
-		timeleft = video_length - audio.currentTime;
-		timeleft = parseTime(timeleft+1);
-		changehere.innerText = "-" + timeleft;
 	}
+
+	function settime() {
+		setTimeAfter.textContent = parseTime(audio.currentTime);
+		timeleft = video_length - audio.currentTime;
+		timeleft = parseTime(timeleft + 1);
+		changehere.textContent = "-" + timeleft;
+	}
+
 	setInterval(settime, 10);
-	
 }
 
 load();
